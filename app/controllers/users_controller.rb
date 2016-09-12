@@ -11,13 +11,12 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     id = params[:id]
-    @micropost = User.find(id).microposts.first
+    @microposts = User.find(id).microposts
   end
 
   # GET /users/new
   def new
     @user = User.new
-    puts @user.error
   end
 
   # GET /users/1/edit

@@ -11,8 +11,14 @@
 </p>
 
 <p>
-  <strong>First micropost:</strong>
-  <%= @micropost.context %>
+  <strong>Microposts:</strong>
+  <ul>
+     <% @microposts.each do |micropost|%>
+        <li>
+          <%= micropost.context %>
+        </li>
+     <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
